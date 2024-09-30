@@ -45,8 +45,8 @@ kmp.set("i", "<C-a>", "<home>", opts)
 kmp.set("i", "<C-o>", "<esc>o", opts)
 
 -- barbar keymap
-kmp.set("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
-kmp.set("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
+kmp.set("n", "<TAB>", "<Cmd>BufferNext<CR>", opts)
+kmp.set("n", "<S-TAB>", "<Cmd>BufferPrevious<CR>", opts)
 kmp.set("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
 kmp.set("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
 kmp.set("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
