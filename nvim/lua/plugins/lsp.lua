@@ -17,6 +17,7 @@ return {
       vim.filetype.add({
         pattern = {
           ["openapi.*%.yaml"] = "yaml.openapi",
+          ["openapi.*%.ya?ml"] = "yaml.openapi",
           ["openapi.*%.json"] = "json.openapi",
         },
       })
