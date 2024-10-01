@@ -59,3 +59,6 @@ kmp.set("n", "<leader>fk", "<Cmd>NvimTreeFocus<CR>", opts)
 
 -- format by lsp
 kmp.set("n", "gq", "<Cmd>lua vim.lsp.buf.format()<CR>", opts)
+
+-- diagnostics on floating window
+kmp.set("n", "<leader>e", "<Cmd>lua vim.diagnostic.open_float()<CR>")

@@ -65,6 +65,14 @@ return {
         initial_mode = "normal",
        })
      end
+   },
+   {
+     "<leader>fe",
+     function ()
+       require('telescope.builtin').diagnostics({
+         initial_mode = "normal"
+       })
+     end
    }
  },
  config = function(_, opts)
