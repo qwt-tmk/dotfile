@@ -41,7 +41,7 @@ return {
       tabpages = true,
       clickable = true,
       icons = {
-        pinned = {button = '', filename = true},
+        pinned = { button = '', filename = true },
       },
       sidebar_filetypes = {
         NvimTree = true,
@@ -59,7 +59,7 @@ return {
         on_attach = function(bufnr)
           require('nvim-tree.api').config.mappings.default_on_attach(bufnr)
         end,
-        filters ={
+        filters = {
           dotfiles = true,
         }
       })
@@ -99,7 +99,7 @@ return {
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
-        },{
+        }, {
           { name = 'buffer' },
         })
       })
@@ -114,7 +114,7 @@ return {
         sources = cmp.config.sources({
           { name = 'path' }
         }, {
-          { name = 'cmdline'}
+          { name = 'cmdline' }
         }),
         matching = { disallow_symbol_nonprefix_matching = false }
       })
