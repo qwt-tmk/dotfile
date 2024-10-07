@@ -37,8 +37,8 @@ kmp.set("i", "<C-a>", "<home>", opts)
 kmp.set("i", "<C-o>", "<esc>o", opts)
 
 -- barbar keymap
-kmp.set("n", "<TAB>", "<Cmd>BufferNext<CR>", opts)
-kmp.set("n", "<S-TAB>", "<Cmd>BufferPrevious<CR>", opts)
+kmp.set("n", "<C-n>", "<Cmd>BufferNext<CR>", opts)
+kmp.set("n", "<C-m>", "<Cmd>BufferPrevious<CR>", opts)
 kmp.set("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
 kmp.set("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
 kmp.set("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
@@ -57,4 +57,4 @@ kmp.set("n", "gq", "<Cmd>lua vim.lsp.buf.format()<CR>", opts)
 kmp.set("n", "<leader>e", "<Cmd>lua vim.diagnostic.open_float()<CR>")
 
 -- go to defenition
-kmp.set("n", "gd", "<Cmd>lua vim.lsp.buf.defenition()<CR>")
+kmp.set("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
