@@ -36,6 +36,25 @@ return {
             end
             fallback()
           end, { 'i' }),
+          ["<C-d>"] = cmp.mapping(function (fallback)
+            if cmp.visible() then
+              return cmp.scroll_docs(4)
+            end
+            fallback()
+          end, { 'i' }),
+          ["<C-u>"] = cmp.mapping(function (fallback)
+            if cmp.visible() then
+              return cmp.scroll_docs(-4)
+            end
+            fallback()
+          end, { 'i' }),
+          ["<C-c>"] = cmp.mapping(function (fallback)
+            if cmp.visible() then
+              return cmp.abort()
+            else
+              return cmp.complete()
+            end
+          end),
         },
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
@@ -57,7 +76,7 @@ return {
         }, {
           { name = 'cmdline' }
         }),
-        matching = { disallow_symbol_nonprefix_matching = false }
+        matching = { disallow_symbol_nonprefix_matching = false },
       })
     end
   },
