@@ -21,14 +21,6 @@ kmp.set("n", "<C-a>", "gg<S-v>G")
 kmp.set("n", "ss", ":split<Return>", opts)
 kmp.set("n", "sv", ":vsplit<Return>", opts)
 
--- Move window
--- these are in config/plugins/tmux.lua
--- kmp.set("n", "<C-h>", "<C-w>h")
--- kmp.set("n", "<C-k>", "<C-w>k")
--- kmp.set("n", "<C-j>", "<C-w>j")
--- kmp.set("n", "<C-l>", "<C-w>l")
--- kmp.set("n", "<C-/>", "<C-w>p")
-
 -- Resize window
 kmp.set("n", "<A-h>", "<C-w><")
 kmp.set("n", "<A-l>", "<C-w>>")
@@ -50,8 +42,9 @@ kmp.set("n", "<S-TAB>", "<Cmd>BufferPrevious<CR>", opts)
 kmp.set("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
 kmp.set("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
 kmp.set("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
-kmp.set("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
 kmp.set("n", "<C-p>", "<Cmd>BufferPick<CR>", opts) -- Magic buffer-picking mode
+kmp.set("n", "<C-c>", "<Cmd>BufferClose<CR>", opts) -- Magic buffer-picking mode
+kmp.set("n", "<A-c>", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", opts)
 
 -- nvim-tree keymap
 kmp.set("n", "<leader>fl", "<Cmd>NvimTreeToggle<CR>", opts)
@@ -62,3 +55,6 @@ kmp.set("n", "gq", "<Cmd>lua vim.lsp.buf.format()<CR>", opts)
 
 -- diagnostics on floating window
 kmp.set("n", "<leader>e", "<Cmd>lua vim.diagnostic.open_float()<CR>")
+
+-- go to defenition
+kmp.set("n", "gd", "<Cmd>lua vim.lsp.buf.defenition()<CR>")
