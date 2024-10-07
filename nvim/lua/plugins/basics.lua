@@ -40,12 +40,13 @@ return {
       auto_hide = false,
       tabpages = true,
       clickable = true,
+      insert_at_end = true,
       icons = {
         pinned = { button = '', filename = true },
       },
       sidebar_filetypes = {
         NvimTree = true,
-      }
+      },
     }
   },
   {
@@ -61,6 +62,9 @@ return {
         end,
         filters = {
           dotfiles = true,
+        },
+        update_focused_file = {
+          enable = true,
         }
       })
     end,
@@ -144,5 +148,57 @@ return {
   },
   {
     'MeanderingProgrammer/render-markdown.nvim'
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      { "fredrikaverpil/neotest-golang", version = "*" },
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-golang"),
+        },
+      })
+    end,
+    keys = {
+      {
+        "<leader>tt",
+        function()
+          require('neotest').run.run()
+        end
+      },
+      {
+        "<leader>te",
+        function()
+          require('neotest').output_panel.toggle()
+        end
+      },
+      {
+        "<leader>ts",
+        function()
+          require('neotest').summary.toggle()
+        end
+      }
+    }
+  },
+  {
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
+    end,
+    keys = {
+      {
+        "<leader>rn",
+        function ()
+          return ":IncRename " .. vim.fn.expand("<cword>")
+        end,
+        expr = true
+      }
+    }
   }
 }
