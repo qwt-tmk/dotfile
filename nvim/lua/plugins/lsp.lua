@@ -12,7 +12,7 @@ return {
 
       local lspconfig = require("lspconfig")
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      capabilities.textDocument.completion.completionItem.snippetSupport = true
+      -- capabilities.textDocument.completion.completionItem.snippetSupport = true
 
       vim.filetype.add({
         pattern = {
