@@ -39,6 +39,7 @@ abbr --add gla git log --all --graph
 abbr --add gd git diff
 abbr --add gdd git diff @^ @
 abbr --add gf git fetch --prune
+abbr --add lg lazygit
 abbr --add sl ls
 abbr --add config 'cd ~/.config && nvim ~/.config/'
 abbr --add vim nvim
