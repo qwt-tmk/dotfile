@@ -35,19 +35,22 @@ return {
       'nvim-tree/nvim-web-devicons',
     },
     init = function() vim.g.barbar_auto_setup = false end,
-    opts = {
-      animation = true,
-      auto_hide = false,
-      tabpages = true,
-      clickable = true,
-      insert_at_end = true,
-      icons = {
-        pinned = { button = '', filename = true },
-      },
-      sidebar_filetypes = {
-        NvimTree = true,
-      },
-    }
+    config = function()
+      require('barbar').setup({
+        animation = true,
+        auto_hide = false,
+        tabpages = true,
+        clickable = true,
+        insert_at_end = true,
+        icons = {
+          pinned = { button = '', filename = true },
+        },
+        sidebar_filetypes = {
+          NvimTree = true,
+        },
+      })
+      vim.api.nvim_set_hl(0, 'BufferInactiveMod', { link = 'BufferInactive' })
+    end
   },
   {
     'nvim-tree/nvim-tree.lua',
@@ -139,7 +142,7 @@ return {
     keys = {
       {
         "<leader>rn",
-        function ()
+        function()
           return ":IncRename " .. vim.fn.expand("<cword>")
         end,
         expr = true
