@@ -4,6 +4,9 @@ local opts = { noremap = true, silent = true }
 -- Do things without affecting the registers
 kmp.set("n", "x", '"_x')
 
+-- Escape with jj
+kmp.set("i", "jj", "<ESC>")
+
 -- Increment/decrement
 -- kmp.set("n", "+", "<C-a>")
 -- kmp.set("n", "-", "<C-x>")
