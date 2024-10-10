@@ -13,6 +13,7 @@ return {
      function()
        require('telescope.builtin').find_files({
          initial_mode = "insert",
+         hidden = true,
        })
      end,
      desc = 'Find Plugin File',
