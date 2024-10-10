@@ -55,6 +55,13 @@ return {
               return cmp.complete()
             end
           end),
+          ["<CR>"] = cmp.mapping(function (fallback)
+            if cmp.visible() then
+              return cmp.confirm()
+            else
+              fallback()
+            end
+          end),
         },
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
