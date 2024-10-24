@@ -148,5 +148,12 @@ return {
         expr = true
       }
     }
-  }
+  },
+  {
+    "rest-nvim/rest.nvim",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "lunarmodules/lua-mimetypes",
+    }
+  },
 }
