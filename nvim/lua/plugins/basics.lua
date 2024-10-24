@@ -64,7 +64,8 @@ return {
           require('nvim-tree.api').config.mappings.default_on_attach(bufnr)
         end,
         filters = {
-          dotfiles = true,
+          dotfiles = false,
+          git_ignored = false,
         },
         update_focused_file = {
           enable = true,
