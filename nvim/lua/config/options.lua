@@ -18,6 +18,8 @@ vim.opt.softtabstop = 0
 vim.opt.tabstop = 4
 vim.opt.smarttab = true
 vim.opt.shiftwidth = 0
+vim.opt.listchars = [[tab:⠲ ,trail:⌀]]
+vim.opt.list = true
 
 vim.opt.foldenable = true
 vim.opt.foldcolumn = "1"
