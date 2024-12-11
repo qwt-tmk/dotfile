@@ -1,5 +1,7 @@
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
+vim.opt.shell = "fish"
+
 vim.opt.number = true
 vim.opt.title = true
 vim.opt.hlsearch = true
@@ -24,7 +26,6 @@ vim.opt.foldlevelstart = 99
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 vim.opt.scrolloff = 1
-vim.opt.shell = "fish"
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 vim.opt.inccommand = "split"
 vim.opt.ignorecase = false

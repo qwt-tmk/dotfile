@@ -21,10 +21,6 @@ return {
 				"lua",
 				"markdown",
 			},
-			auto_install = true,
-			autotag = {
-				enable = true,
-			},
 			incremental_selection = {
 				enable = true,
 			},
