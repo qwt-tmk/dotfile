@@ -11,11 +11,17 @@ vim.opt.laststatus = 2
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.breakindent = true
-vim.opt.expandtab = true
+vim.opt.expandtab = false
 vim.opt.softtabstop = 0
 vim.opt.tabstop = 4
 vim.opt.smarttab = true
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 0
+
+vim.opt.foldenable = true
+vim.opt.foldcolumn = "1"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 vim.opt.scrolloff = 1
 vim.opt.shell = "fish"

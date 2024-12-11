@@ -3,3 +3,4 @@ dlv
 configstore
 fish/fish_variables
 nvim/rest-client
+crossnote/*

@@ -22,7 +22,7 @@ return {
       })
 
       local servers = {
-        'bashls', 'tailwindcss', 'dockerls', 'docker_compose_language_service',
+        'black', 'bashls', 'tailwindcss', 'dockerls', 'docker_compose_language_service',
         'gopls', 'markdown_oxide', 'html', 'jsonls', 'vacuum', 'pyright', 'sqlls',
         'terraformls', 'vimls', 'gitlab_ci_ls'
       }
