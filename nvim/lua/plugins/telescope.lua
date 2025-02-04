@@ -74,7 +74,15 @@ return {
          initial_mode = "normal"
        })
      end
-   }
+   },
+   {
+     "<leader>fc",
+     function ()
+       require('telescope.builtin').lsp_references({
+         initial_mode = "normal"
+       })
+     end
+   },
  },
  config = function(_, opts)
    local telescope = require("telescope")

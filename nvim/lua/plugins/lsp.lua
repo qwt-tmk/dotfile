@@ -26,7 +26,7 @@ return {
 			local servers = {
 				'black', 'bashls', 'dockerls', 'docker_compose_language_service',
 				'gopls', 'markdown_oxide', 'html', 'jsonls', 'vacuum', 'pyright', 'sqlls',
-				'terraformls', 'vimls', 'gitlab_ci_ls', 'ts_ls'
+				'terraformls', 'vimls', 'gitlab_ci_ls', 'ts_ls', 'prismals'
 			}
 
 			for _, lsp in ipairs(servers) do

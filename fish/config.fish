@@ -2,7 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# brew
 set PATH /opt/homebrew/bin $PATH
+# brew no auto upgrade
+set -x HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK true
 
 # peco bindings
 source ~/.config/fish/functions/peco.fish
@@ -73,3 +76,5 @@ end
 # <<< conda initialize <<<
 conda deactivate
 
+# postgresql
+fish_add_path /opt/homebrew/opt/postgresql@16/bin
