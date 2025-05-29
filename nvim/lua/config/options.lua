@@ -37,3 +37,5 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.splitkeep = "cursor"
 vim.opt.termguicolors = true
+vim.opt.history = 100
+

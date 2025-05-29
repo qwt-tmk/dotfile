@@ -1,6 +1,13 @@
 .DS_Store
+.nuxt
+mise
+yarn
 dlv
 configstore
 fish/fish_variables
 nvim/rest-client
 crossnote/*
+gcloud
+fish/*/_nvm*
+fish/*/nvm*
+fish/local.fish

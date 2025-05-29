@@ -46,35 +46,12 @@ abbr --add lg lazygit
 abbr --add sl ls
 abbr --add config 'cd ~/.config && nvim ~/.config/'
 abbr --add vim nvim
-abbr --add astrn 'cd ~/astrn-shop/'
-
-# zscaler ca bundle
-set -x SSL_CERT_FILE ~/.zscaler/ca_bundle.crt
-set -x AWS_CA_BUNDLE ~/.zscaler/ca_bundle.crt
-set -x PIP_CERT ~/.zscaler/ca_bundle.crt
-set -x REQUESTS_CA_BUNDLE ~/.zscaler/ca_bundle.crt
-set -x NODE_EXTRA_CA_CERTS ~/.zscaler/ca_bundle.crt
-set -x XDG_CONFIG_HOME ~/.config
 
 # starship initiation
 starship init fish | source
 
-# golang
-set PATH $PATH $(go env GOPATH)/bin
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/homebrew/Caskroom/miniforge/base/bin/conda
-    eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
-        . "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/opt/homebrew/Caskroom/miniforge/base/bin" $PATH
-    end
+# source local config file
+if test -f ~/.config/fish/local.fish
+	source ~/.config/fish/local.fish
 end
-# <<< conda initialize <<<
-conda deactivate
-
-# postgresql
-fish_add_path /opt/homebrew/opt/postgresql@16/bin

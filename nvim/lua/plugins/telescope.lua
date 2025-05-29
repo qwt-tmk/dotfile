@@ -83,6 +83,14 @@ return {
        })
      end
    },
+   {
+     "<leader>fq",
+     function ()
+       require('telescope.builtin').quickfix({
+         initial_mode = "normal"
+       })
+     end
+   },
  },
  config = function(_, opts)
    local telescope = require("telescope")

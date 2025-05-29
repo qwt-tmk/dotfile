@@ -1,3 +1,5 @@
+vim.lsp.set_log_level("DEBUG")
+
 return {
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
@@ -26,7 +28,8 @@ return {
 			local servers = {
 				'bashls', 'dockerls', 'docker_compose_language_service',
 				'gopls', 'markdown_oxide', 'html', 'jsonls', 'vacuum', 'pyright', 'sqlls',
-				'terraformls', 'vimls', 'gitlab_ci_ls', 'ts_ls', 'prismals', 'graphql'
+				'terraformls', 'vimls', 'gitlab_ci_ls', 'ts_ls', 'prismals', 'graphql',
+				'volar', 'yamlls'
 			}
 
 			for _, lsp in ipairs(servers) do
