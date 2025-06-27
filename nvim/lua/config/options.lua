@@ -39,3 +39,4 @@ vim.opt.splitkeep = "cursor"
 vim.opt.termguicolors = true
 vim.opt.history = 100
 
+vim.opt.completeopt = [[menuone,noselect,popup,fuzzy,noinsert]]

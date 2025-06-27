@@ -55,3 +55,22 @@ starship init fish | source
 if test -f ~/.config/fish/local.fish
 	source ~/.config/fish/local.fish
 end
+
+# vs code shell integration
+string match -q "$TERM_PROGRAM" "vscode"
+and . (code --locate-shell-integration-path fish)
+
+# direnv
+direnv hook fish | source
+
+# for cline
+set term_program $TERM_PROGRAM
+set cache_file (string replace -r '.*' (status current-filename) '' | string match -r '[^/]+$')
+set cache_path (string join '' (or $XDG_CACHE_HOME "$HOME/.cache") "/p10k-instant-prompt-" $cache_file ".fish")
+
+if test "$term_program" != "vscode" -a -r "$cache_path"
+    source "$cache_path"
+end
+
+# mise activation
+mise activate fish

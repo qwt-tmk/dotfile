@@ -11,6 +11,12 @@ function module.apply_to_config(config)
 			key = "¥",
 			action = action.SendKey { key = '\\' }
 		},
+		-- zoom mode
+		{
+			key = 'z',
+			mods = 'LEADER',
+			action = action.TogglePaneZoomState,
+		},
 		-- split panes
 		{
 			key = 's',
@@ -22,7 +28,7 @@ function module.apply_to_config(config)
 			mods = 'LEADER',
 			action = action.SplitVertical { domain = 'CurrentPaneDomain' },
 		},
-		-- Move
+		-- Controll panes
 		{
 			key = 'h',
 			mods = 'LEADER',
@@ -57,6 +63,27 @@ function module.apply_to_config(config)
 			key = 'p',
 			mods = 'LEADER|CTRL',
 			action = action.PaneSelect { mode = 'SwapWithActive' },
+		},
+		-- resize pane
+		{
+			key = 'h',
+			mods = 'SHIFT|OPT',
+			action = action.AdjustPaneSize { 'Left', 1 },
+		},
+		{
+			key = 'l',
+			mods = 'SHIFT|OPT',
+			action = action.AdjustPaneSize { 'Right', 1 },
+		},
+		{
+			key = 'k',
+			mods = 'SHIFT|OPT',
+			action = action.AdjustPaneSize { 'Up', 1 },
+		},
+		{
+			key = 'j',
+			mods = 'SHIFT|OPT',
+			action = action.AdjustPaneSize { 'Down', 1 },
 		},
 		-- move tabs
 		{
