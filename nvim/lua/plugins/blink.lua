@@ -83,6 +83,8 @@ return {
       ['<C-e>'] = false, -- disable
       ['<C-c>'] = { 'show', 'hide', 'fallback' },
       ['<C-s>'] = { 'show_signature', 'hide_signature', 'fallback' }, -- override default sig help
+      ['<C-d>'] = { 'scroll_documentation_down', 'fallback'},
+      ['<C-u>'] = { 'scroll_documentation_up', 'fallback'},
       ['<ENTER>'] = { 'select_and_accept', 'fallback'},
     },
 
