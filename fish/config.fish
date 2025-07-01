@@ -50,7 +50,6 @@ abbr --add vim nvim
 # starship initiation
 starship init fish | source
 
-
 # source local config file
 if test -f ~/.config/fish/local.fish
 	source ~/.config/fish/local.fish
@@ -73,4 +72,4 @@ if test "$term_program" != "vscode" -a -r "$cache_path"
 end
 
 # mise activation
-mise activate fish
+mise activate fish --shims | source
