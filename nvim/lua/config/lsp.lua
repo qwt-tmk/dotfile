@@ -35,4 +35,6 @@ vim.lsp.enable({
   'lua_ls',
   'vue_ls',
   'ts_ls',
+  'graphql',
+  'terraformls'
 })
