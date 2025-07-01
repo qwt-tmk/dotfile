@@ -1,5 +1,6 @@
 .DS_Store
 .nuxt
+.nuxtrc
 mise
 yarn
 dlv
