@@ -31,7 +31,7 @@ config.window_padding = {
   bottom = 5,
 }
 
-require'keymaps'.apply_to_config(config)
+require 'keymaps'.apply_to_config(config)
 require 'tabline'
 
 return config
