@@ -2,10 +2,9 @@ local wezterm = require 'wezterm'
 local tabline = wezterm.plugin.require "https://github.com/michaelbrusegard/tabline.wez"
 tabline.setup({
   options = {
-    icons_enabled = false,
     section_separators = {
       left = wezterm.nerdfonts.ple_upper_left_triangle,
-      right = wezterm.nerdfonts.ple_lower_left_triangle,
+      right = wezterm.nerdfonts.ple_lower_right_triangle,
     },
     component_separators = {
       left = wezterm.nerdfonts.ple_forwardslash_separator,
@@ -20,17 +19,20 @@ tabline.setup({
     }
   },
   sections = {
-    tab_line_c = { '' },
+    tab_line_a = { 'workspace' },
+    tab_line_b = { 'mode' },
+    tab_line_c = { '', icons_enabled = false },
     tab_active = {
-      'index',
-      { 'tab',    padding = 1 },
-      { 'zoomed', padding = 1 },
+      { 'index', icons_enabled = false },
+      { 'tab',    padding = 1, icons_enabled = false },
+      { 'zoomed', padding = 0 },
     },
     tab_inactive = {
       'index',
-      { 'tab',    padding = 1 },
-      { 'zoomed', padding = 1 },
-    }
+      { 'tab',    padding = 1, icons_enabled = false },
+      { 'zoomed', padding = 0 },
+    },
+    tab_line_y = { 'battery' },
   }
 })
 

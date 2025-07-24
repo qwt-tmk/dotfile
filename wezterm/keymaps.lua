@@ -19,12 +19,12 @@ function module.apply_to_config(config)
     },
     -- split panes
     {
-      key = 's',
+      key = '%',
       mods = 'LEADER',
       action = action.SplitHorizontal { domain = 'CurrentPaneDomain' },
     },
     {
-      key = 'v',
+      key = '"',
       mods = 'LEADER',
       action = action.SplitVertical { domain = 'CurrentPaneDomain' },
     },

@@ -36,5 +36,6 @@ vim.lsp.enable({
   'vue_ls',
   'ts_ls',
   'graphql',
-  'terraformls'
+  'terraformls',
+  'protols',
 })
