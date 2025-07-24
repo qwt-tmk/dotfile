@@ -114,7 +114,7 @@ return {
           ["<C-u>"] = false
         },
       },
-      file_ignore_patterns = { "%.git/" },
+      file_ignore_patterns = { "%.git/", "/%.git" }, -- remove .git and submodule's .git
     }
     telescope.setup(opts)
     telescope.load_extension("file_browser")
