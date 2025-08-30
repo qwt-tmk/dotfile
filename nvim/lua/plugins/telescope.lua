@@ -14,6 +14,7 @@ return {
         require('telescope.builtin').find_files({
           initial_mode = "insert",
           hidden = true,
+          no_ignore = true,
         })
       end,
       desc = 'Find Plugin File',
@@ -114,7 +115,7 @@ return {
           ["<C-u>"] = false
         },
       },
-      file_ignore_patterns = { "%.git/", "/%.git" }, -- remove .git and submodule's .git
+      file_ignore_patterns = { "%.git/", "/%.git", "node_modules/" }, -- remove .git and submodule's .git
     }
     telescope.setup(opts)
     telescope.load_extension("file_browser")
