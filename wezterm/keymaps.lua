@@ -6,6 +6,12 @@ local action = wezterm.action
 function module.apply_to_config(config)
   config.leader = { key = 't', mods = 'CTRL', timeout_milliseconds = 1000 }
   config.keys = {
+    -- Shift + Enter to new line
+    {
+      key = 'Enter',
+      mods = 'SHIFT',
+      action = action.SendString('\n')
+    },
     -- yen char to backslash char
     {
       key = "¥",

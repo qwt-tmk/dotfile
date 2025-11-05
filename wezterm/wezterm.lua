@@ -18,6 +18,9 @@ config.window_frame = {
   font_size = 20,
 }
 
+-- Activate bell sound
+config.audible_bell = "SystemBeep"
+
 -- Appearance
 -- config.color_scheme = 'Kanagawa Dragon (Gogh)'
 config.color_scheme = 'Kanagawa (Gogh)'

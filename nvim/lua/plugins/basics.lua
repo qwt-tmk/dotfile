@@ -1,6 +1,6 @@
 return {
   {
-    {'neovim/nvim-lspconfig'}
+    { 'neovim/nvim-lspconfig' }
   },
   {
     'windwp/nvim-autopairs',
@@ -151,6 +151,25 @@ return {
         end,
         expr = true
       }
+    }
+  },
+  {
+    {
+      "declancm/cinnamon.nvim",
+      version = "*", -- use latest release
+      opts = {
+        keymaps = {
+          basic = true,
+          extra = true,
+        },
+        options = {
+          mode = "window",
+          delay = 3,
+          max_delta = {
+            time = 100,
+          },
+        }
+      },
     }
   },
   {
