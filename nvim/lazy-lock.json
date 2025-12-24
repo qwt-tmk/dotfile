@@ -14,11 +14,11 @@
   "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
   "melange-nvim": { "branch": "master", "commit": "ce42f6b629beeaa00591ba73a77d3eeac4cf28ce" },
   "mini.icons": { "branch": "main", "commit": "ff2e4f1d29f659cc2bad0f9256f2f6195c6b2428" },
-  "mini.nvim": { "branch": "main", "commit": "6170f606fbdb94bf461635c47962f61dceffe496" },
+  "mini.nvim": { "branch": "main", "commit": "7e55c3d2c04da134085a31156196836f80a89982" },
   "neotest": { "branch": "master", "commit": "deadfb1af5ce458742671ad3a013acb9a6b41178" },
   "neotest-golang": { "branch": "main", "commit": "37e400cfe9d193e508b1a512e96cbef83b08deb6" },
   "nvim-autopairs": { "branch": "master", "commit": "c2a0dd0d931d0fb07665e1fedb1ea688da3b80b4" },
-  "nvim-lspconfig": { "branch": "master", "commit": "5eeb45c8c469b84777a5bd8796b698c8a1c780a7" },
+  "nvim-lspconfig": { "branch": "master", "commit": "8973916a3d015d65a8c4614e141f4270a713cf33" },
   "nvim-nio": { "branch": "master", "commit": "21f5324bfac14e22ba26553caf69ec76ae8a7662" },
   "nvim-tree.lua": { "branch": "master", "commit": "b8b44b6a2494d086a9177251a119f9daec6cace8" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
@@ -35,5 +35,6 @@
   "telescope-recent-files": { "branch": "main", "commit": "eb190c0baded1cbfa9d8767c817b054377683163" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "tokyonight.nvim": { "branch": "main", "commit": "5da1b76e64daf4c5d410f06bcb6b9cb640da7dfd" },
-  "vgit.nvim": { "branch": "main", "commit": "edc01bb41663ba29893894cbdf760e89aac3eecb" }
+  "vgit.nvim": { "branch": "main", "commit": "edc01bb41663ba29893894cbdf760e89aac3eecb" },
+  "zen-mode.nvim": { "branch": "main", "commit": "8564ce6d29ec7554eb9df578efa882d33b3c23a7" }
 }

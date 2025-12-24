@@ -179,4 +179,26 @@ return {
       "lunarmodules/lua-mimetypes",
     }
   },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      window = {
+        options = {
+          signcolumn = "auto",
+        },
+      },
+      plugins = {
+        gitsigns = { enabled = true },
+      },
+    },
+    keys = {
+      {
+        "sz",
+        function()
+          require('zen-mode').toggle({})
+        end,
+        expr = false
+      }
+    }
+  },
 }
