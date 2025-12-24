@@ -6,6 +6,5 @@ require("config.lazy")
 require("config.options")
 require("config.keymaps")
 require("config.lsp")
-require("config.diagnostic")
 
 vim.cmd("colorscheme kanagawa-dragon")
