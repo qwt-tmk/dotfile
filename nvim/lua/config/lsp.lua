@@ -1,4 +1,5 @@
 -- Vue周りの設定
+-- typescriptのLSPとしてvueを認識するvtslsを使う。
 local root_dir = require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")
 local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
 local vue_plugin = {
@@ -22,11 +23,10 @@ local vtsls_config = {
   },
   filetypes = tsserver_filetypes,
 }
+vim.lsp.config('vtsls', vtsls_config)
 
--- If you are on most recent `nvim-lspconfig`
-local vue_ls_config = {}
-
-
+-- Go LSP
+-- 結合テスト用に切り出したパッケージをLSPに認識させる
 vim.lsp.config('gopls', {
   settings = {
     gopls = {
@@ -35,11 +35,25 @@ vim.lsp.config('gopls', {
   }
 })
 
-vim.lsp.config('vtsls', vtsls_config)
-vim.lsp.config('vue_ls', vue_ls_config)
-vim.lsp.enable({'vtsls', 'vue_ls'})
+-- Lua LSP
+vim.lsp.config('lua_ls', {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' },
+      },
+      workspace = {
+        -- NeovimのランタイムをLSPに見せる（補完/型推論が良くなる）
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
+      },
+    },
+  },
+})
 
 vim.lsp.enable({
+  'vtsls',
+  'vue_ls',
   'gopls',
   'lua_ls',
   'graphql',
