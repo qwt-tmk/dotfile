@@ -35,6 +35,7 @@ function push_upstream
 end
 
 abbr --add gpss --function push_upstream
+abbr --add g git
 abbr --add ga git add
 abbr --add gc gitmoji -c
 abbr --add gl git log --graph
@@ -45,6 +46,7 @@ abbr --add gf git fetch --prune
 abbr --add lg lazygit
 abbr --add sl ls
 abbr --add config 'cd ~/.config && nvim ~/.config/'
+abbr --add v nvim
 abbr --add vim nvim
 
 # starship initiation
