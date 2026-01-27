@@ -27,7 +27,6 @@ abbr --add gwc git switch -c
 abbr --add gpl git pull
 abbr --add gps git push
 abbr --add tf terraform
-abbr --add c clear
 
 function push_upstream
     set current_branch (git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
@@ -48,6 +47,9 @@ abbr --add sl ls
 abbr --add config 'cd ~/.config && nvim ~/.config/'
 abbr --add v nvim
 abbr --add vim nvim
+abbr --add cl claude
+abbr --add fb fabric-ai # depends on instllation source. maight be `fabric`.
+abbr --add img wezterm imgcat
 
 # starship initiation
 starship init fish | source
@@ -77,5 +79,5 @@ end
 mise activate fish --shims | source
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "$HOME/.rd/bin"
+set --export --prepend PATH "/Users/tomokikuwata/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
