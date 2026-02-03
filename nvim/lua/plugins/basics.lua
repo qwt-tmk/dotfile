@@ -12,13 +12,6 @@ return {
   },
   {
     'windwp/nvim-ts-autotag',
-    config = function(_, opts)
-      require('nvim-ts-autotag').setup({
-        opts = {
-          enable_rename = true
-        }
-      })
-    end
   },
   {
     'nvim-lualine/lualine.nvim',

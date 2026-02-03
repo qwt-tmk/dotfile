@@ -30,7 +30,7 @@ vim.lsp.config('vtsls', vtsls_config)
 vim.lsp.config('gopls', {
   settings = {
     gopls = {
-      buildFlags = {"-tags=integration"},
+      buildFlags = { "-tags=integration" },
     },
   }
 })
@@ -52,13 +52,13 @@ vim.lsp.config('lua_ls', {
 })
 
 vim.lsp.enable({
-  'vtsls',
-  'vue_ls',
+  'vtsls', -- npm install -g @vtsls/language-server
+  'vue_ls', -- npm install -g @vue/language-server
   'gopls',
   'lua_ls',
   'graphql',
   'terraformls',
-  'protols',
   'sqls', -- go install github.com/sqls-server/sqls@latest
+  'buf_ls', -- brew install bufbuild/buf/buf
   'kotlin_lsp',
 })

@@ -61,7 +61,8 @@ return {
             },
             kind = {
               highlight = function(ctx)
-                local _, hl, _ = require('mini.icons').get('lsp', ctx.king)
+                local _, hl, _ = require('mini.icons').get('lsp', ctx.kind)
+                return hl
               end
             }
           }
