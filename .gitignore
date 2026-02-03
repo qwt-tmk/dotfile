@@ -13,3 +13,4 @@ fish/*/_nvm*
 fish/*/nvm*
 fish/local.fish
 .android
+raycast

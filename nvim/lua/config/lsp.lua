@@ -59,6 +59,6 @@ vim.lsp.enable({
   'graphql',
   'terraformls',
   'protols',
-  'sqls',
+  'sqls', -- go install github.com/sqls-server/sqls@latest
   'kotlin_lsp',
 })
