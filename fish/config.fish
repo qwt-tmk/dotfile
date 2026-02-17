@@ -50,6 +50,7 @@ abbr --add vim nvim
 abbr --add cl claude
 abbr --add fb fabric-ai # depends on instllation source. maight be `fabric`.
 abbr --add img wezterm imgcat
+abbr --add grp grep
 
 # starship initiation
 starship init fish | source
