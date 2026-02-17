@@ -58,8 +58,8 @@ vim.lsp.enable({
   'lua_ls',
   'graphql',
   'terraformls',
+  'sqls', -- go install github.com/sqls-server/sqls@latest
   'buf_ls', -- brew install bufbuild/buf/buf
-  'sqls',
   'kotlin_lsp',
   'jsonls', -- npm install -g vscode-langservers-extracted
 })

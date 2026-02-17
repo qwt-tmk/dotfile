@@ -14,3 +14,4 @@ fish/*/nvm*
 fish/local.fish
 .android
 .env
+raycast
