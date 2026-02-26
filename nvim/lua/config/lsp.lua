@@ -62,4 +62,5 @@ vim.lsp.enable({
   'buf_ls', -- brew install bufbuild/buf/buf
   'kotlin_lsp',
   'jsonls', -- npm install -g vscode-langservers-extracted
+  'yamlls', -- npm install -g yaml-language-server
 })
