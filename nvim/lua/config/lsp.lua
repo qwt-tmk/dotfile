@@ -61,4 +61,6 @@ vim.lsp.enable({
   'sqls', -- go install github.com/sqls-server/sqls@latest
   'buf_ls', -- brew install bufbuild/buf/buf
   'kotlin_lsp',
+  'jsonls', -- npm install -g vscode-langservers-extracted
+  'yamlls', -- npm install -g yaml-language-server
 })

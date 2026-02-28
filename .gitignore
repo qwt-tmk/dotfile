@@ -13,6 +13,7 @@ fish/*/_nvm*
 fish/*/nvm*
 fish/local.fish
 .android
+.env
 raycast
 gh
 flutter
