@@ -1,11 +1,15 @@
 continuation_prompt = '[❯] (fg:#a675d8)'
-
-right_format = """$username"""
+add_newline = true
+right_format = """$time$username"""
 
 [character]
-#success_symbol = '[❯](fg:#a675d8)'
 success_symbol = '[❯](fg:cyan)'
 error_symbol = '[❯](fg:magenta)'
+
+[time]
+disabled = false
+format = '[$time]($style) '
+style = "fg:#888888"
 
 [cmd_duration]
 show_milliseconds = false
@@ -23,7 +27,6 @@ read_only = " 󰌾"
 [username]
 style_root = "bold fg:grey"
 style_user = "fg:grey"
-show_always = true
 format = "[$user ]($style)"
 
 [git_status]
@@ -60,7 +63,17 @@ format = ' [${symbol}(${version} )]($style)'
 symbol = " "
 
 [aws]
-symbol = "  "
+format = '[$symbol$region $profile]($style) '
+style = 'yellow'
+symbol = " "
+[aws.region_aliases]
+ap-northeast-1 = 'apn1'
+
+[gcloud]
+format = '[$symbol$region $project]($style)'
+symbol = " "
+[gcloud.region_aliases]
+asia-northeast1 = 'asn1'
 
 [buf]
 symbol = " "
