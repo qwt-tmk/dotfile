@@ -63,14 +63,14 @@ format = ' [${symbol}(${version} )]($style)'
 symbol = " "
 
 [aws]
-format = '[$symbol$region $profile]($style) '
+format = '[$symbol$profile]($style) '
 style = 'yellow'
 symbol = " "
 [aws.region_aliases]
 ap-northeast-1 = 'apn1'
 
 [gcloud]
-format = '[$symbol$region $project]($style)'
+format = '[$symbol$project]($style)'
 symbol = " "
 [gcloud.region_aliases]
 asia-northeast1 = 'asn1'
