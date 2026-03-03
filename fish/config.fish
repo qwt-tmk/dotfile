@@ -42,6 +42,7 @@ abbr --add gla git log --all --graph
 abbr --add gd git diff
 abbr --add gdd git diff @^ @
 abbr --add gf git fetch --prune
+abbr --add gm git merge
 abbr --add lg lazygit
 abbr --add sl ls
 abbr --add config 'cd ~/.config && nvim ~/.config/'
@@ -51,6 +52,7 @@ abbr --add cl claude
 abbr --add fb fabric-ai # depends on instllation source. maight be `fabric`.
 abbr --add img wezterm imgcat
 abbr --add grp grep
+abbr --add tm tmux
 
 # starship initiation
 starship init fish | source
