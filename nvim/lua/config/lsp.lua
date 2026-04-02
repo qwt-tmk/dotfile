@@ -63,4 +63,6 @@ vim.lsp.enable({
   'kotlin_lsp',
   'jsonls', -- npm install -g vscode-langservers-extracted
   'yamlls', -- npm install -g yaml-language-server
+  'dartls',
+  'nixd', -- nix profile add github:nix-community/nixd
 })
