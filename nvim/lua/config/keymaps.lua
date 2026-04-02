@@ -18,10 +18,8 @@ kmp.set("x", ">", ">gv", opts)
 kmp.set("x", "<", "<gv", opts)
 
 -- Escape from terminal mode
-kmp.set('t', '<C-h>', [[<C-\><C-n><C-w>h]], opts)
-kmp.set('t', '<C-j>', [[<C-\><C-n><C-w>j]], opts)
-kmp.set('t', '<C-k>', [[<C-\><C-n><C-w>k]], opts)
-kmp.set('t', '<C-l>', [[<C-\><C-n><C-w>l]], opts)
+-- Pushing `Ctrl+\` gets interpreted as `|` (pipe). I don't know why, maybe due to JIS keyboard.
+kmp.set('t', [[||]], [[<C-\><C-n>]], opts)
 
 -- Split window
 kmp.set("n", "ss", ":split<Return>", opts)
