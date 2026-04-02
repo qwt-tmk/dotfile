@@ -82,7 +82,7 @@ end
 mise activate fish --shims | source
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "/Users/tomokikuwata/.rd/bin"
+set --export --prepend PATH "$HOME/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # go path
