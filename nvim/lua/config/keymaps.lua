@@ -7,14 +7,21 @@ kmp.set("n", "x", '"_x')
 -- Escape with jj
 kmp.set("i", "jj", "<ESC>")
 
--- Delete a word backwards
-kmp.set("n", "dw", 'vb"_d')
-
 -- Move the cursor to the right edge
 kmp.set("n", "-", "$")
 
 -- Select all
 kmp.set("n", "<C-a>", "gg<S-v>G")
+
+-- Indent continuously
+kmp.set("x", ">", ">gv", opts)
+kmp.set("x", "<", "<gv", opts)
+
+-- Escape from terminal mode
+kmp.set('t', '<C-h>', [[<C-\><C-n><C-w>h]], opts)
+kmp.set('t', '<C-j>', [[<C-\><C-n><C-w>j]], opts)
+kmp.set('t', '<C-k>', [[<C-\><C-n><C-w>k]], opts)
+kmp.set('t', '<C-l>', [[<C-\><C-n><C-w>l]], opts)
 
 -- Split window
 kmp.set("n", "ss", ":split<Return>", opts)
