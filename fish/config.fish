@@ -61,6 +61,8 @@ starship init fish | source
 if test -f ~/.config/fish/local.fish
 	source ~/.config/fish/local.fish
 end
+# load .env.global
+loadenv ~/.config/.env.global
 
 # vs code shell integration
 string match -q "$TERM_PROGRAM" "vscode"
