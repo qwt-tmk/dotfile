@@ -24,12 +24,22 @@ tabline.setup({
     tab_line_c = { '', icons_enabled = false },
     tab_active = {
       { 'index', icons_enabled = false },
-      { 'tab',    padding = 1, icons_enabled = false },
+      {
+        'tab',
+        padding = 1,
+        icons_enabled = false,
+        fmt = function(s) return s == 'default' and '_' or s end,
+      },
       { 'zoomed', padding = 0 },
     },
     tab_inactive = {
       'index',
-      { 'tab',    padding = 1, icons_enabled = false },
+      {
+        'tab',
+        padding = 1,
+        icons_enabled = false,
+        fmt = function(s) return s == 'default' and '_' or s end,
+      },
       { 'zoomed', padding = 0 },
     },
     tab_line_y = { 'battery' },
