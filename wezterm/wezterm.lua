@@ -36,5 +36,6 @@ config.window_padding = {
 
 require 'keymaps'.apply_to_config(config)
 require 'tabline'
+require 'copymode'.apply_to_config(config)
 
 return config
