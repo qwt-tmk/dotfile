@@ -80,12 +80,12 @@ if test "$term_program" != "vscode" -a -r "$cache_path"
     source "$cache_path"
 end
 
+# go path
+set PATH ~/go/bin $PATH
+
 # mise activation
 mise activate fish --shims | source
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 set --export --prepend PATH "$HOME/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-# go path
-set PATH ~/go/bin $PATH
