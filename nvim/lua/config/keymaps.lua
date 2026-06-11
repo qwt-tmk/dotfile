@@ -7,6 +7,9 @@ kmp.set("n", "x", '"_x')
 -- Escape with jj
 kmp.set("i", "jj", "<ESC>")
 
+-- Command with \
+kmp.set("n", "\\", ":")
+
 -- Move the cursor to the right edge
 kmp.set("n", "-", "$")
 
