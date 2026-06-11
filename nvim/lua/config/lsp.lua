@@ -1,6 +1,9 @@
 -- Vue周りの設定
 -- typescriptのLSPとしてvueを認識するvtslsを使う。
-local root_dir = require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")
+local root_dir = function(fname)
+  return require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")(fname)
+      or vim.fn.expand("~")
+end
 local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
 local vue_plugin = {
   name = '@vue/typescript-plugin',
@@ -52,17 +55,17 @@ vim.lsp.config('lua_ls', {
 })
 
 vim.lsp.enable({
-  'vtsls', -- npm install -g @vtsls/language-server
+  'vtsls',  -- npm install -g @vtsls/language-server
   'vue_ls', -- npm install -g @vue/language-server
   'gopls',
   'lua_ls',
   'graphql',
   'terraformls',
-  'sqls', -- go install github.com/sqls-server/sqls@latest
+  'sqls',   -- go install github.com/sqls-server/sqls@latest
   'buf_ls', -- brew install bufbuild/buf/buf
   'kotlin_lsp',
   'jsonls', -- npm install -g vscode-langservers-extracted
   'yamlls', -- npm install -g yaml-language-server
   'dartls',
-  'nixd', -- nix profile add github:nix-community/nixd
+  'nixd',   -- nix profile add github:nix-community/nixd
 })
